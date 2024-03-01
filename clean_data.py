@@ -21,7 +21,7 @@ def clean_data(infile, outfile):
             if chunk_count == 0:
                 chunk.to_csv(outfile, index=False, mode="w")
             else:
-                chunk.to_csv(outfile, index=False, mode="a")
+                chunk.to_csv(outfile, index=False, mode="a", header=False)
             # progress update
             print("finished chunk {c}, about {s} rows total\n".format(
                 c=chunk_count, s=(chunk_count + 1) * chunk_size))
